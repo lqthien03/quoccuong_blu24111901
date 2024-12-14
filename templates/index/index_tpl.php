@@ -129,94 +129,28 @@
     <!-- hình ảnh -->
     <div class="wrap-hinhanh">
         <div class="wrap-content">
-            <div class="box-main-hinhanh" data-aos="fade-up" data-aos-duration="1000">
+            <div class="title-main">
+                <span class="title-effect">Album hình ảnh</span>
+                <p class="slogan"><?= $slogan['name' . $lang] ?></p>
+            </div>
+            <div class="box-main-hinhanh">
                 <?php foreach ($hinhanh as $k => $v) {
-                    if ($k < 6) {
-                        $thump = "";
-                        if ($k == 0) $thump = '375x275x1';
-                        else if ($k == 1) $thump = '375x170x1';
-                        else if ($k == 2) $thump = '375x275x1';
-                        else if ($k == 3) $thump = '300x255x1';
-                        else if ($k == 4) $thump = '355x205x1';
-                        else if ($k == 5) $thump = '475x255x1';
-
-
-
-                ?>
-
-                        <a href="<?= $v[$sluglang] ?>" class="hinhanh-image-item hinhanh-image-item-<?= ($k++) ?>">
-                            <?php if ($k == 2) { ?>
-                                <div class="title-main">
-                                    <span class="title-effect">Album của quán</span>
-                                    <p class="slogan"><?= $slogan['name' . $lang] ?></p>
-                                </div>
-                            <?php }
-                            ?>
-                            <div class="hinhanh-image-item-m scale-img">
-                                <img class="lazy w-100" onerror="this.src='<?= THUMBS ?>/<?= $thump ?>/assets/images/noimage.png';" data-src="<?= THUMBS ?>/<?= $thump ?>/<?= UPLOAD_PRODUCT_L . $v['photo'] ?>" alt="<?= $v['name' . $lang] ?>" />
-                                <div class="hinhanh-txt">
-                                    <span><?= $v['name' . $lang] ?></span>
-                                </div>
+                    if ($k < 6) { ?>
+                        <div class="item-hinhanh">
+                            <div class="hinhanh-img scale-img">
+                                <?= $func->getImage(['class' => 'lazy w-100', 'sizes' => '386x275x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
                             </div>
-
-                            <?php if ($k == 5) { ?>
-                                <div class="title-item2">
-                                    <h3>Kính cháo quý khách</h3>
-                                </div>
-                            <?php }
-                            ?>
-                        </a>
+                            <div class="hinhanh-info">
+                                <h3 class="hinhanh-name text-split-1"><?= $v['name' . $lang] ?></h3>
+                            </div>
+                        </div>
                 <?php }
                 }
                 ?>
             </div>
         </div>
     </div>
-    <!-- đặt bàn -->
-    <div class="wrap-book" id="datban">
-        <div class="wrap-content">
-            <div class="box-main-book">
-                <div class="left-book" data-aos="fade-right" data-aos-duration="1000">
-                    <form class="validation-newsletter" novalidate method="post" action="" enctype="multipart/form-data">
-                        <div class="title-main">
-                            <span class="title-effect">Liên hệ đặt bàn</span>
-                            <p class="slogan"><?= $slogan['name' . $lang] ?></p>
-                        </div>
-                        <div class="item-group">
-                            <input type="text" name="dataNewsletter[fullname]" id="fullname-newsletter" placeholder="Họ tên" class="input" required="">
-                            <div></div>
-                            <div class="invalid-feedback">Vui lòng nhập họ và tên</div>
-                        </div>
-                        <div class="item-group">
-                            <input type="number" name="dataNewsletter[phone]" id="phone-newsletter" placeholder="Số điện thoại" class="input" required="">
-                            <div></div>
-                            <div class="invalid-feedback">Vui lòng nhập số điện thoại</div>
-                        </div>
 
-                        <div class="item-group">
-                            <input type="text" name="dataNewsletter[email]" id="email-newsletter" placeholder="Email" class="input" required="">
-                            <div></div>
-                            <div class="invalid-feedback">Vui lòng nhập email</div>
-                        </div>
-
-                        <div class="item-group">
-                            <textarea class="input" id="notes-newsletter" rows="5" placeholder="Ghi chú" name="dataNewsletter[notes]"></textarea>
-                            <div></div>
-                            <div class="invalid-feedback">Vui lòng nhập ghi chú</div>
-                        </div>
-
-                        <div class="newsletter-button">
-                            <input type="hidden" class="" name="dataNewsletter[type]" value="dangkynhantin">
-                            <input type="hidden" class="" name="dataNewsletter[date_created]" value="<?= time() ?>">
-                            <input type="submit" name="submit-newsletter" value="Đặt bàn tại đây" disabled>
-                            <input type="hidden" class="" name="recaptcha_response_newsletter" id="recaptchaResponseNewsletter">
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
     <!-- tin tức -->
     <div class="wrap-tintuc">
         <div class="wrap-content">
