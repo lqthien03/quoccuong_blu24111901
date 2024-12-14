@@ -23,6 +23,7 @@ $config['news'][$nametype]['copy_image'] = true;
 $config['news'][$nametype]['slug'] = true;
 $config['news'][$nametype]['check'] = array("noibat" => noibat, "hienthi" => hienthi);
 $config['news'][$nametype]['images'] = true;
+$config['news'][$nametype]['desc'] = true;
 $config['news'][$nametype]['show_images'] = true;
 $config['news'][$nametype]['width'] = 42;
 $config['news'][$nametype]['height'] = 42;

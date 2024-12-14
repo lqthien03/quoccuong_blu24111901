@@ -106,7 +106,23 @@
                     </div>
                     <div class="control-img-dichvu control-owl transition"></div>
                 </div>
-                <div class="right-dichvu"></div>
+                <div class="right-dichvu">
+                    <div>
+                        <?php foreach ($dichvu as $k => $v) { ?>
+                            <div class="dichvu-item">
+                                <div class="dichvu-number">
+                                    <p>0<?= $k + 1 ?></p>
+                                </div>
+                                <div class="dichvu-info">
+                                    <h3 class="dichvu-name text-split-2"><?= $v['name' . $lang] ?></h3>
+
+                                </div>
+
+                            </div>
+                        <?php  }
+                        ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
