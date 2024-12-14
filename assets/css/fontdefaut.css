@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'font1';
+    src: url('../fonts/fontdefaut/HelveticaNeue.eot');
+    src: url('../fonts/fontdefaut/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontdefaut/HelveticaNeue.woff2') format('woff2'),
+        url('../fonts/fontdefaut/HelveticaNeue.woff') format('woff'),
+        url('../fonts/fontdefaut/HelveticaNeue.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('../fonts/fontdefaut/SVN-DancingScript.eot');
+    src: url('../fonts/fontdefaut/SVN-DancingScript.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontdefaut/SVN-DancingScript.woff2') format('woff2'),
+        url('../fonts/fontdefaut/SVN-DancingScript.woff') format('woff'),
+        url('../fonts/fontdefaut/SVN-DancingScript.ttf') format('truetype');
+}
