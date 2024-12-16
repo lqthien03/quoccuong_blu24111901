@@ -32,19 +32,20 @@
 
 
         <?php if (!empty($product)) { ?>
-            <div class="box-main-grid">
+            <div class="grid-product">
                 <?php foreach ($product as $k => $v) { ?>
-                    <a href="<?= $v[$sluglang] ?>" class="item-menu" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="menu-img">
-                            <div class="scale-img">
-                                <?= $func->getImage(['isLazy' => false, 'class' => 'lazy', 'sizes' => '365x285x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-                            </div>
+                    <a class="box-product text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?>">
+                        <div class="item-product scale-img hover_sang2">
+                            <?= $func->getImage(['class' => 'lazy w-100', 'sizes' => '290x287x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
                         </div>
-                        <div class="menu-info">
-                            <h3 class="menu-name text-split-1"><?= $v['name' . $lang] ?></h3>
-                            <div class="menu-price">
-                                <p><?= ($v['regular_price']) ? $func->formatMoney($v['regular_price']) : lienhe ?></p>
+                        <div class="product-info">
+                            <h3 class="product-name text-split-1">
+                                <?= $v['name' . $lang] ?>
+                            </h3>
+                            <div class="product-price">
+                                <span class="price-new">Giá: <?= ($v['regular_price']) ? $func->formatMoney($v['regular_price']) : lienhe ?></span>
                             </div>
+
                         </div>
                     </a>
                 <?php } ?>

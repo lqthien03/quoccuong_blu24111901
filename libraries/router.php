@@ -105,15 +105,16 @@ require_once LIBRARIES . "lang/web/$lang.php";
 /* Tối ưu link */
 $requick = array(
     /* Sản phẩm */
-    array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "thuc-don", "type" => "thuc-don"),
-    array("tbl" => "product_cat", "field" => "idc", "source" => "product", "com" => "thuc-don", "type" => "thuc-don"),
-    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "thuc-don", "type" => "thuc-don", "menu" => true),
+    array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
+    array("tbl" => "product_cat", "field" => "idc", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
+    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "san-pham", "type" => "san-pham", "menu" => true),
 
     /* album */
     array("tbl" => "product", "field" => "id", "source" => "product", "com" => "hinh-anh", "type" => "hinh-anh", "menu" => true),
 
     /* Bài viết */
     array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
+    array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
 
     /* Trang tĩnh */
     array("tbl" => "static", "field" => "id", "source" => "static", "com" => "gioi-thieu", "type" => "gioi-thieu", "menu" => true),
@@ -159,12 +160,13 @@ switch ($com) {
         $seo->set('type', 'article');
         $titleMain = "Giới thiệu";
         break;
-    case 'dat-ban':
-        $source = "static";
-        $template = "static/static";
+
+    case 'dich-vu':
+        $source = "news";
+        $template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+        $seo->set('type', isset($_GET['id']) ? "article" : "object");
         $type = $com;
-        $seo->set('type', 'article');
-        $titleMain = "Đặt bàn";
+        $titleMain = dichvu;
         break;
     case 'tin-tuc':
         $source = "news";
@@ -180,12 +182,12 @@ switch ($com) {
         $type = $com;
         $titleMain = "Hình ảnh";
         break;
-    case 'thuc-don':
+    case 'san-pham':
         $source = "product";
         $template = isset($_GET['id']) ? "product/product_detail" : "product/productsort";
         $seo->set('type', isset($_GET['id']) ? "article" : "object");
         $type = $com;
-        $titleMain = "Thực đơn";
+        $titleMain = "Sản phẩm";
         break;
 
     case 'tim-kiem':

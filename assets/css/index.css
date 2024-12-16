@@ -91,6 +91,10 @@
     border-bottom: 1px solid #FBFBFB;
 
 }
+.menu{
+    z-index: 9999;
+    position: static;
+}
 .menu .wrap-content {
     display: flex;
     position: relative;
@@ -210,27 +214,29 @@ gap: 100px;
 }
 
 span.tieudesub {
-    font-size: 35px;
-    color: #413D3D;
-    overflow: hidden;
-    font-family: "font2";
+    font-size: 60px;
+    color: transparent;
+    -webkit-text-stroke:1px #424242;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 span.tieude {
     display: block;
     font-family: 'font1';
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     color: #CE0606;
     text-transform: uppercase;
 }
 
 .desc-gioithieu {
-    font-size: 16px;
+    font-size: 15px;
     color: #424242;
     text-align: justify;
     line-height: 25px;
     margin-top: 8px;
+    font-family: "font1";
 }
 
 .group-hotline-gioithieu{
@@ -251,6 +257,7 @@ span.tieude {
 .box-hotline-gioithieu p{
     margin: 0px;
     font-size: 15px;
+    font-family: "font1";
 }
 .box-hotline-gioithieu p:last-child{
     font-weight: 500;
@@ -277,8 +284,8 @@ span.tieude {
 .xem-them-gioithieu p{
     margin: 0px;
     color: white;
-    font-weight: 500;
     font-size: 18px;
+    font-family: "font2"
 }
 .xem-them-gioithieu i{
     font-size: 16px;
@@ -324,7 +331,7 @@ span.tieude {
 .criteria-name{
     margin: 0px;
     color: white;
-    font-weight: 500;
+    font-family: "font1";
 }
 /* sản phẩm*/
 .wrap-product {
@@ -350,6 +357,7 @@ span.tieude {
     font-weight: bold;
     cursor: pointer;
     text-transform:uppercase ;
+    font-family: "font3";
 }
 .choose_list p.active{
     background: #CB0300;
@@ -373,7 +381,7 @@ span.tieude {
     color: black;
     text-transform: capitalize;
     display: block;
-    font-weight: bold;
+    font-family: "font3";
     text-align: center;
     margin-top: 15px;
     margin-bottom: 6px;
@@ -404,6 +412,7 @@ span.tieude {
 }
 .left-dichvu{
     width: 48%;
+    position: relative;
 }
 .right-dichvu{
     width: 48%;
@@ -439,13 +448,17 @@ span.tieude {
 
 }
 .dichvu-name{
-    font-size: 14px;
+    font-size: 15px;
     margin: 0px;
+    font-family: "font1";
+    color: black;
 }
 .slick_dichvu .slick-slide{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
-
+.dichvu-img{
+    clip-path: polygon(0 0, 60% 0%, 100% 30%, 100% 100%, 40% 100%, 0% 70%);
+}
 
 /* tin tức */
 .wrap-tintuc {
@@ -468,7 +481,7 @@ span.tieude {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: fit-content;
-    padding: 10px;
+    padding: 15px 10px;
     position: relative;
     left: -20px;
 }
@@ -479,14 +492,20 @@ span.tieude {
 }
 .tintuc-name{
     margin: 0.5rem 0px;
+    font-family: "font2";
 }
 .tintuc-time p{
     margin: 0px;
 }
 .tintuc-name{
     font-size: 16px;
-    font-weight: bold;
     color: black;
+    font-family: "font3";
+
+}
+.tintuc-desc{
+    font-family: "font1";
+    margin: 0px;
 }
 .box-main-tintuc .owl-dots{
     margin-top: 20px;
@@ -525,8 +544,8 @@ span.tieude {
     width: calc(100% - 20px - 70px);
 }
 .feedback-info .feedback-name{
+    font-family: "font3";
     font-size: 16px;
-    font-weight: bold;
     color: black;
     margin: 0px;
 }
@@ -537,6 +556,7 @@ span.tieude {
 }
 .feedback-info p{
     margin: 0px;
+    font-family: "font1";
 }
 .right-feedback{
     width:calc(100% - 50%);

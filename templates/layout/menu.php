@@ -1,15 +1,15 @@
 <div class="w-menu">
     <div class="menu">
         <div class="wrap-content">
-            <ul class="menu-main ">
+            <ul class="menu-main">
                 <li class=""><a class="<?php if ($com == '' || $com == 'index') echo 'active'; ?> transition" href="" title="<?= trangchu ?>"><?= trangchu ?></a></li>
                 <li class=""><a class="<?php if ($com == 'gioi-thieu') echo 'active'; ?> transition" href="gioi-thieu" title="<?= gioithieu ?>"><?= gioithieu ?></a></li>
 
                 <li>
-                    <a class="has-child <?php if ($com == 'thuc-don') echo 'active'; ?> transition" href="thuc-don" title="Thực đơn">Thực đơn</a>
-                    <?php if (count($thucdonListMenu)) { ?>
+                    <a class="has-child <?php if ($com == 'san-pham') echo 'active'; ?> transition" href="san-pham" title="Sản phẩm">Sản phẩm</a>
+                    <?php if (count($sanphamList)) { ?>
                         <ul>
-                            <?php foreach ($thucdonListMenu as $klist => $vlist) {
+                            <?php foreach ($sanphamList as $klist => $vlist) {
                                 $thucdonCatMenu = $d->rawQuery("select name$lang, slugvi, slugen, id from #_product_cat where id_list = ? and find_in_set('hienthi',status) order by numb,id desc", array($vlist['id'])); ?>
                                 <li>
                                     <a class="has-child transition" title="<?= $vlist['name' . $lang] ?>" href="<?= $vlist[$sluglang] ?>"><?= $vlist['name' . $lang] ?></a>
@@ -29,7 +29,7 @@
                         </ul>
                     <?php } ?>
                 </li>
-                <li class=""><a class="<?php if ($com == 'dat-ban') echo 'active'; ?> transition" href="#" id="scrollToForm" title="Đặt bàn - đặc tiệc">Đặt bàn - đặc tiệc</a></li>
+                <li class=""><a class="<?php if ($com == 'dich-vu') echo 'active'; ?> transition" href="dich-vu" title="Dịch vụ">Dịch vụ</a></li>
                 <li class=""><a class="<?php if ($com == 'hinh-anh') echo 'active'; ?> transition" href="hinh-anh" title="Hình ảnh">Hình ảnh</a></li>
                 <li class=""><a class="<?php if ($com == 'tin-tuc') echo 'active'; ?> transition" href="tin-tuc" title="Tin tức">Tin tức</a></li>
                 <li class=""><a class="<?php if ($com == 'lien-he') echo 'active'; ?> transition" href="lien-he" title="<?= lienhe ?>"><?= lienhe ?></a></li>

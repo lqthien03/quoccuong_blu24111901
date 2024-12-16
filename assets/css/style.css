@@ -678,7 +678,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .slogan {
     margin: 0px auto 15px;
-    font-size: 20px;
+    font-size: 16px;
     color: #CE0606;
     font-family: 'font1';
     font-weight: bold;
@@ -687,32 +687,10 @@ input[type="number"]::-webkit-inner-spin-button {
     width: fit-content;
 }
 
-.slogan::before {
-    content: "";
-    position: absolute;
-    background: url(../imgs/line_slogan-left.png) no-repeat;
-    width: 51px;
-    height: 9px;
-    top: 50%;
-    left: -55px;
-    transform: translateY(-50%);
-}
-
-.slogan::after {
-    content: "";
-    position: absolute;
-    background: url(../imgs/line_slogan-right.png) no-repeat;
-    width: 51px;
-    height: 9px;
-    top: 50%;
-    right: -55px;
-    transform: translateY(-50%);
-}
-
 .title-main span {
     color: #454545;
     font-size: 30px;
-    font-family: 'font1';
+    font-family: 'font3';
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -2158,7 +2136,7 @@ h1 {
     position: absolute;
     top: 0px;
     width: 100%;
-    z-index: 10;
+    z-index: 9999;
 }
 
 @media only screen and (max-width: 991px) {
@@ -2245,9 +2223,9 @@ h1 {
     position: relative;
     font-size: 14px;
     color: white;
+    font-family: "font3";
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: bold;
     height: 50px;
     line-height: 50px;
 }
@@ -5049,7 +5027,7 @@ a.name-newsnb:hover {
 
 
 .price-new {
-    font-size: 14px;
+    font-size: 15px;
     color: #d20000;
     font-weight: normal;
 }

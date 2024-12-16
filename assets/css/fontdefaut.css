@@ -1,17 +1,25 @@
 @font-face {
     font-family: 'font1';
-    src: url('../fonts/fontdefaut/HelveticaNeue.eot');
-    src: url('../fonts/fontdefaut/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fontdefaut/HelveticaNeue.woff2') format('woff2'),
-        url('../fonts/fontdefaut/HelveticaNeue.woff') format('woff'),
-        url('../fonts/fontdefaut/HelveticaNeue.ttf') format('truetype');
+    src: url('../fonts/fontdefaut/Montserrat-Medium.eot');
+    src: url('../fonts/fontdefaut/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontdefaut/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/fontdefaut/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/fontdefaut/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font2';
+    src: url('../fonts/fontdefaut/Montserrat-SemiBold.eot');
+    src: url('../fonts/fontdefaut/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontdefaut/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/fontdefaut/Montserrat-SemiBold.woff') format('woff'),
+        url('../fonts/fontdefaut/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'font2';
-    src: url('../fonts/fontdefaut/SVN-DancingScript.eot');
-    src: url('../fonts/fontdefaut/SVN-DancingScript.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fontdefaut/SVN-DancingScript.woff2') format('woff2'),
-        url('../fonts/fontdefaut/SVN-DancingScript.woff') format('woff'),
-        url('../fonts/fontdefaut/SVN-DancingScript.ttf') format('truetype');
+    font-family: 'font3';
+    src: url('../fonts/fontdefaut/Montserrat-Bold.eot');
+    src: url('../fonts/fontdefaut/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontdefaut/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/fontdefaut/Montserrat-Bold.woff') format('woff'),
+        url('../fonts/fontdefaut/Montserrat-Bold.ttf') format('truetype');
 }

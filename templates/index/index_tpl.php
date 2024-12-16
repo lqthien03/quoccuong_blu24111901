@@ -97,7 +97,10 @@
                 <div class="left-dichvu">
                     <div class="owl-page owl-carousel owl-theme" data-items="screen:0|items:1|margin:10,screen:425|items:2|margin:10,screen:575|items:2|margin:10,screen:767|items:2|margin:10,screen:991|items:1|margin:20,screen:1199|items:1|margin:20" data-rewind="1" data-autoplay="0" data-loop="1" data-lazyload="1" data-mousedrag="1" data-center="1" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1" data-navcontainer=".control-img-dichvu">
                         <?php foreach ($dichvu_img as $v) { ?>
-                            <?= $func->getImage(['isLazy' => false, 'class' => 'lazy w-100', 'sizes' => '365x285x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+                            <div class="dichvu-img scale-img">
+                                <?= $func->getImage(['isLazy' => false, 'class' => 'lazy w-100', 'sizes' => '576x420x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+
+                            </div>
                         <?php } ?>
                     </div>
                     <div class="control-img-dichvu control-owl transition"></div>
@@ -106,7 +109,7 @@
                     <div class="slick_dichvu">
                         <?php foreach ($dichvu as $k => $v) { ?>
                             <div>
-                                <div class="dichvu-item">
+                                <a href="<?= $v[$sluglang] ?>" class="dichvu-item">
                                     <div class="dichvu-number">
                                         <p>0<?= $k + 1 ?></p>
                                     </div>
@@ -114,7 +117,7 @@
                                         <h3 class="dichvu-name text-split-2"><?= $v['name' . $lang] ?></h3>
 
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         <?php  }
                         ?>
@@ -162,11 +165,11 @@
                     <?php foreach ($tintuc as $v) { ?>
                         <div class="box-tintuc" title="<?= $v['name' . $lang] ?>">
                             <div class="tintuc-item">
-                                <div class="tintuc-img scale-img">
-                                    <a href="<?= $v[$sluglang] ?>">
-                                        <?= $func->getImage(['isLazy' => false, 'class' => 'lazy w-100', 'sizes' => '295x200x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-                                    </a>
-                                </div>
+
+                                <a href="<?= $v[$sluglang] ?>" class="scale-img tintuc-img">
+                                    <?= $func->getImage(['isLazy' => false, 'class' => 'lazy w-100', 'sizes' => '295x200x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+                                </a>
+
                                 <div class="tintuc-info">
                                     <div class="tintuc-time">
                                         <i class="bi bi-calendar2-week"></i>
