@@ -61,32 +61,27 @@
             </div>
         </div>
     </div>
-    <div class="wrap-menu-noibat">
+    <div class="wrap-product">
         <div class="wrap-content">
             <div class="title-main">
-                <span class="title-effect">Menu nổi bật</span>
+                <span class="title-effect">Sản phẩm của chúng tôi</span>
+                <p class="line"></p>
                 <p class="slogan"><?= $slogan['name' . $lang] ?></p>
             </div>
-            <div class="box-main-menu-noibat" data-aos="fade-up" data-aos-duration="1000">
-                <div class="owl-page owl-carousel owl-theme" data-items="screen:0|items:1|margin:10,screen:425|items:2|margin:10,screen:575|items:2|margin:10,screen:767|items:2|margin:10,screen:991|items:3|margin:20,screen:1199|items:3|margin:20" data-rewind="1" data-autoplay="0" data-loop="1" data-lazyload="1" data-mousedrag="1" data-center="1" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1" data-navcontainer=".control-menu-noibat">
-                    <?php foreach ($menu_noibat as $v) { ?>
-                        <a href="<?= $v[$sluglang] ?>" class="item-menu">
-                            <div class="menu-img">
-                                <div class="scale-img">
-                                    <?= $func->getImage(['isLazy' => false, 'class' => 'lazy', 'sizes' => '365x285x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-
-                                </div>
-                            </div>
-                            <div class="menu-info">
-                                <h3 class="menu-name text-split-1"><?= $v['name' . $lang] ?></h3>
-                                <div class="menu-price">
-                                    <p><?= ($v['regular_price']) ? $func->formatMoney($v['regular_price']) : lienhe ?></p>
-                                </div>
-                            </div>
-                        </a>
+            <div class="box-main-product">
+                <div class="choose_list">
+                    <p class="title-menu active" data-list="">Tất Cả</p>
+                    <?php foreach ($sanphamList as $k => $v) { ?>
+                        <p class="title-menu" data-list="<?= $v['id'] ?>"><?= $v['name' . $lang] ?></p>
                     <?php } ?>
                 </div>
-                <div class="control-menu-noibat control-owl transition"></div>
+                <div class="wp_dv_index">
+                    <div class="show_padding" data-list=""></div>
+                </div>
+
+                <a href="san-pham" class="xemthem-sanpham">
+                    <div>Xem thêm</div>
+                </a>
             </div>
         </div>
     </div>
@@ -95,6 +90,7 @@
         <div class="wrap-content">
             <div class="title-main">
                 <span class="title-effect">Dịch vụ nổi bật</span>
+                <p class="line"></p>
                 <p class="slogan"><?= $slogan['name' . $lang] ?></p>
             </div>
             <div class="box-main-dichvu">
@@ -132,13 +128,14 @@
         <div class="wrap-content">
             <div class="title-main">
                 <span class="title-effect">Album hình ảnh</span>
+                <p class="line"></p>
                 <p class="slogan"><?= $slogan['name' . $lang] ?></p>
             </div>
             <div class="box-main-hinhanh">
                 <?php foreach ($hinhanh as $k => $v) {
                     if ($k < 6) { ?>
                         <div class="item-hinhanh">
-                            <div class="hinhanh-img scale-img">
+                            <div class="hinhanh-img scale-img" data-fancybox="gallery" data-src="<?= ASSET . UPLOAD_PRODUCT_L . $v['photo'] ?>">
                                 <?= $func->getImage(['class' => 'lazy w-100', 'sizes' => '386x275x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
                             </div>
                             <div class="hinhanh-info">
@@ -157,6 +154,7 @@
         <div class="wrap-content">
             <div class="title-main">
                 <span class="title-effect">Tin tức & sự kiện</span>
+                <p class="line"></p>
                 <p class="slogan"><?= $slogan['name' . $lang] ?></p>
             </div>
             <div class="box-main-tintuc" data-aos="fade-up" data-aos-duration="1000">

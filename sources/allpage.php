@@ -20,7 +20,8 @@ $thucdonListMenu = $d->rawQuery("select name$lang, slugvi, slugen, id from #_pro
 $productHot = $d->rawQuery("select id, name$lang,desc$lang, slugvi, slugen, photo, regular_price, sale_price, discount,file_attach  from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'));
 $map_nb = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo,numb from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('chi-nhanh'), 'result', 7200);
 $dichvuList = $d->rawQuery("select name$lang, slugvi, slugen, id from #_news_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'));
-// var_dump($dichvuList);
+$sanphamList = $d->rawQuery("select name$lang, slugvi, slugen, id from #_product_list where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'));
+
 // 
 $cauhoi = $d->rawQuery("select name$lang,content$lang, id from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('cau-hoi-thuong-gap'));
 $slider = $cache->get("select name$lang, desc$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);

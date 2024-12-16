@@ -1,4 +1,4 @@
-<div class="group-header">
+<div class="group-header <?= ($source != 'index') ? 'set-color' : '' ?>">
     <div class="header">
         <div class="wrap-content">
             <a class="logo-head peShiner" href="">

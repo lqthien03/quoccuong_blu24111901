@@ -1,7 +1,7 @@
 <div class="w-menu">
     <div class="menu">
         <div class="wrap-content">
-            <ul class="menu-main <?= ($source != 'index') ? 'set-color' : '' ?>">
+            <ul class="menu-main ">
                 <li class=""><a class="<?php if ($com == '' || $com == 'index') echo 'active'; ?> transition" href="" title="<?= trangchu ?>"><?= trangchu ?></a></li>
                 <li class=""><a class="<?php if ($com == 'gioi-thieu') echo 'active'; ?> transition" href="gioi-thieu" title="<?= gioithieu ?>"><?= gioithieu ?></a></li>
 

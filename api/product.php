@@ -29,7 +29,7 @@ $tempLink .= "&p=";
 $pageLink .= $tempLink;
 
 /* Get data */
-$sql = "select name$lang,desc$lang, slugvi, slugen, id, photo, regular_price, sale_price, discount, type,file_attach  from #_product where type='mon-an' $where and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc";
+$sql = "select name$lang,desc$lang, slugvi, slugen, id, photo, regular_price, sale_price, discount, type,file_attach  from #_product where type='san-pham' $where and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc";
 $sqlCache = $sql . " limit $start, $pagingAjax->perpage";
 $items = $cache->get($sqlCache, $params, 'result', 7200);
 
@@ -40,24 +40,24 @@ $countItems = count($cache->get($sql, $params, 'result', 7200));
 $pagingItems = $pagingAjax->getAllPageLinks($countItems, $pageLink, $eShow);
 ?>
 <?php if ($countItems) { ?>
-    <div class="grid-product-menu">
+    <div class="grid-product">
         <?php foreach ($items as $k => $v) { ?>
             <a class="box-product text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?>">
                 <div class="item-product scale-img hover_sang2">
                     <?= $func->getImage(['class' => 'lazy w-100', 'sizes' => '290x287x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
                 </div>
+                <div class="product-info">
+                    <h3 class="product-name text-split-1">
+                        <?= $v['name' . $lang] ?>
+                    </h3>
+                    <div class="product-price">
+                        <span class="price-new">Giá: <?= ($v['regular_price']) ? $func->formatMoney($v['regular_price']) : lienhe ?></span>
+                    </div>
+
+                </div>
             </a>
         <?php } ?>
     </div>
-    <?php if ($k >= 7) { ?>
-        <a href="mon-an">
-            <div class="xemthem">
-                Xem thêm
-            </div>
-        </a>
-    <?php }
-    ?>
-
 
 <?php } ?>
 <script>

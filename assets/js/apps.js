@@ -133,9 +133,9 @@ BLUEWEB_FRAMEWORK.Pagings = function () {
         })
     }
     if (isExist($('.choose_list'))) {
-        $(".choose_list span").click(function () {
-            ($(this).parents('.choose_list').find("span").hasClass('choosed')) ? $(this).parents('.choose_list').find("span").removeClass('choosed') : '';
-            $(this).addClass('choosed');
+        $(".choose_list p").click(function () {
+            ($(this).parents('.choose_list').find("p").hasClass('active')) ? $(this).parents('.choose_list').find("p").removeClass('active') : '';
+            $(this).addClass('active');
             var list = $(this).attr("data-list");
             $(".show_padding").each(function () {
                 loadPaging('api/product.php?perpage=8&idList=' + list, '.show_padding');
