@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="footer-article">
-        <div class="bgr-white-footer padding-top-bottom d-flex flex-wrap justify-content-between">
+        <div class="wrap-content padding-top-bottom d-flex flex-wrap justify-content-between">
             <div class="footer-news">
                 <div class="title-main">
                     <span class="title-effect name-footer"><?= $footer['name' . $lang] ?></span>
@@ -9,25 +9,31 @@
 
             </div>
             <div class="footer-news">
-                <img class="lazy image-footer" onerror="this.src='<?= THUMBS ?>/220x310x1/assets/images/noimage.png';" data-src="<?= THUMBS ?>/220x310x1/<?= UPLOAD_PHOTO_L . $mocua['photo'] ?>" />
+                <h3 class="title-footer">Chính sách</h3>
+                <ul class="footer-ul d-flex flex-wrap justify-content-between">
+                    <?php foreach ($policy as $v) { ?>
+                        <li><a class=" text-decoration-none " href="<?= $v[$sluglang] ?>"
+                                title="<?= $v['name' . $lang] ?>"><?= $v['name' . $lang] ?></a></li>
+                    <?php } ?>
+                </ul>
             </div>
             <div class="footer-news">
-                <p class="footer-title">Facebook của chúng tôi</p>
                 <?= $addons->set('fanpage-facebook', 'fanpage-facebook', 1); ?>
             </div>
 
         </div>
-    </div>
-    <div class="footer-powered">
-        <div class="wrap-content">
-            <div class="row text-align-center">
-                <div class="footer-copyright col-md-12">Copyright © 2024 <?= $copyright['name' . $lang] ?>. Designed by
-                    <a href="https://blueweb.com.vn/" class=" text-decoration-none" title="Blueweb.com.vn">Blueweb.com.vn</a>
-                </div>
+        <div class="footer-powered">
+            <div class="wrap-content">
+                <div class="row text-align-center">
+                    <div class="footer-copyright col-md-12">Copyright © 2024 <?= $copyright['name' . $lang] ?>. Designed by
+                        <a href="https://blueweb.com.vn/" class=" text-decoration-none" title="Blueweb.com.vn">Blueweb.com.vn</a>
+                    </div>
 
+                </div>
             </div>
         </div>
     </div>
+
     <!-- map -->
 
 

@@ -99,21 +99,32 @@ $config['photo']['photo_static'][$nametype]['thumb'] = '600x500x1';
 $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
 
 /* Social */
-// $nametype = "social";
-// $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Social";
-// $config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => hienthi);
-// $config['photo']['man_photo'][$nametype]['number_photo'] = 2;
-// $config['photo']['man_photo'][$nametype]['images_photo'] = true;
-// $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
-// $config['photo']['man_photo'][$nametype]['link_photo'] = true;
-// $config['photo']['man_photo'][$nametype]['name_photo'] = true;
-// $config['photo']['man_photo'][$nametype]['width_photo'] = 30;
-// $config['photo']['man_photo'][$nametype]['height_photo'] = 30;
-// $config['photo']['man_photo'][$nametype]['thumb_photo'] = '30x30x2';
-// $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
+$nametype = "social";
+$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Mạng xã hội";
+$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => hienthi);
+$config['photo']['man_photo'][$nametype]['number_photo'] = 2;
+$config['photo']['man_photo'][$nametype]['images_photo'] = true;
+$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
+$config['photo']['man_photo'][$nametype]['link_photo'] = true;
+$config['photo']['man_photo'][$nametype]['name_photo'] = true;
+$config['photo']['man_photo'][$nametype]['width_photo'] = 255;
+$config['photo']['man_photo'][$nametype]['height_photo'] = 130;
+$config['photo']['man_photo'][$nametype]['thumb_photo'] = '255x130x1';
+$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
 
 
-
+/* Video */
+$nametype = "video";
+$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Video";
+$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => hienthi);
+$config['photo']['man_photo'][$nametype]['number_photo'] = 2;
+$config['photo']['man_photo'][$nametype]['video_photo'] = true;
+$config['photo']['man_photo'][$nametype]['name_photo'] = true;
+$config['photo']['man_photo'][$nametype]['images_photo'] = true;
+$config['photo']['man_photo'][$nametype]['width_photo'] = 600;
+$config['photo']['man_photo'][$nametype]['height_photo'] = 325;
+$config['photo']['man_photo'][$nametype]['thumb_photo'] = '600x325x1';
+$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
 
 
 

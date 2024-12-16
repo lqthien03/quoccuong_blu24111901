@@ -743,10 +743,10 @@ BLUEWEB_FRAMEWORK.SlickPage = function () {
 
         ]
     });
-    // feedback
-    if (isExist($(".slick_feedback"))) {
-        $(".slick_feedback").slick({
-            slidesToShow: 3,
+    // Dịch vụ
+    if (isExist($(".slick_dichvu"))) {
+        $(".slick_dichvu").slick({
+            slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
@@ -759,17 +759,22 @@ BLUEWEB_FRAMEWORK.SlickPage = function () {
             infinite: false,
         });
     }
-    $('.slick_bot').slick({
-        slidesToShow: 1,
+//    feedback
+if (isExist($(".slick_feedback"))) {
+    $(".slick_feedback").slick({
+        slidesToShow: 3,
         slidesToScroll: 1,
-        speed: 600,
-        dots: false,
-        autoplay: false,
-        infinite: true,
-        centerMode: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
         focusOnSelect: false,
-        arrows: false
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        centerMode: false,
+        dots: false,
+        infinite: false,
     });
+}
     //
     if (isExist($(".slide-text"))) {
         $(".slide-text").slick({

@@ -670,6 +670,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .title-main {
     margin-bottom: 1.5rem;
     text-align: center;
+    
 }
 
 .slogan {
@@ -3594,17 +3595,10 @@ border-radius: 100%;
 /*   */
 
 .footer-article {
-    background: url(../imgs/bgr_footer2.png) no-repeat;
+    background: url(../imgs/bgr_footer.png) no-repeat;
     background-size: 100% 100%;
-    padding: 30px 30px;
+    padding: 50px 0px 0px 0px;
 }
-
-.footer-article .bgr-white-footer {
-    background: #ffffffc9;
-    border-radius: 40px;
-    padding: 20px 100px;
-}
-
 .footer-title {
     text-transform: uppercase;
     font-size: 20px;
@@ -3629,7 +3623,7 @@ border-radius: 100%;
 }
 
 .footer-info {
-    color: black;
+    color: white;
 }
 
 .footer-ul {
@@ -3685,12 +3679,12 @@ border-radius: 100%;
 
 .footer-powered {
     color: #ffffff;
-    background: #CE0606;
 }
 
 .footer-powered .wrap-content {
     padding-top: 10px;
     padding-bottom: 10px;
+    border-top: 1px solid white;
 }
 
 .footer-statistic {
@@ -5298,9 +5292,6 @@ a.name-newsnb:hover {
 
 .footer-news:nth-child(2) {
     width: 25%;
-    border-left: 2px dashed #FFD200;
-    border-right: 2px dashed #FFD200;
-    padding: 0px 10px;
     text-align: center;
 }
 

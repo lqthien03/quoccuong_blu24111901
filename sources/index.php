@@ -10,10 +10,12 @@ $menu_chinh = $d->rawQuery("select name$lang,desc$lang,photo, regular_price, slu
 $tintuc = $d->rawQuery("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tin-tuc'));
 $tieuchi = $d->rawQuery("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('tieu-chi'));
 $dichvu = $d->rawQuery("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'));
+$feedback = $d->rawQuery("select name$lang, slugvi, slugen, desc$lang,content$lang, date_created, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('feedback'));
 $dichvu_img = $d->rawQuery("select id, name$lang, slugvi, slugen, photo from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('hinh-dich-vu'));
 $hinhanh = $d->rawQuery("select id, name$lang, slugvi, slugen, photo from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('hinh-anh'));
 $dichvuNoibat = $d->rawQuery("select name$lang, slugvi, slugen, desc$lang,icon, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'));
 $tiktok = $d->rawQuery("select name$lang, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('tiktok'));
+$video = $cache->get("select name$lang, desc$lang, link_video,photo from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('video'), 'result', 7200);
 /* SEO */
 $seopage = $d->rawQueryOne("select * from #_seopage where type = ? limit 0,1", array('trang-chu'));
 $seo->set('h1', $seopage['title' . $seolang]);
