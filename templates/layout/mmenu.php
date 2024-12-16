@@ -36,7 +36,7 @@
                         <div class="center_scrolldmu">
                             <ul>
                                 <li><a href="gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
-                                <li><a href="thuc-don" title="Thực đơn">Thực đơn</a></li>
+                                <li><a href="san-pham" title="Sản phẩm">Sản phẩm</a></li>
                                 <li><a href="hinh-anh" title="Hình ảnh">Hình ảnh</a></li>
                                 <li><a href="tin-tuc" title="Tin tức">Tin tức</a></li>
                                 <li><a href="lien-he" title="Liên hệ">Liên hệ</a></li>
@@ -82,15 +82,15 @@
                         </a>
                     </li>
                     <li class="nav-item has-childs">
-                        <a href="thuc-don" class="nav-link" title="Thực đơn">
-                            Thực đơn
-                            <?php if (count($thucdonListMenu)) { ?>
+                        <a href="san-pham" class="nav-link" title="Sản phẩm">
+                            Sản phẩm
+                            <?php if (count($sanphamList)) { ?>
                                 <i class="open_mnu down_icon"></i>
                             <?php } ?>
                         </a>
-                        <?php if (count($thucdonListMenu)) { ?>
+                        <?php if (count($sanphamList)) { ?>
                             <ul class="dropdown-menu" style="display: none;">
-                                <?php foreach ($thucdonListMenu as $klist => $vlist) {
+                                <?php foreach ($sanphamList as $klist => $vlist) {
                                     $thucdonCatMenu = $d->rawQuery("select name$lang, slugvi, slugen, id from #_product_cat where id_list = ? and find_in_set('hienthi',status) order by numb,id desc", array($vlist['id'])); ?>
                                     <li class="nav-item-lv2">
                                         <a class="nav-link" href="<?= $vlist[$sluglang] ?>"
@@ -111,6 +111,11 @@
                                 <?php } ?>
                             </ul>
                         <?php } ?>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="dich-vu" title="Dịch vụ">
+                            Dịch vụ
+                        </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="hinh-anh" title="Hình ảnh">

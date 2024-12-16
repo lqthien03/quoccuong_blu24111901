@@ -1,3 +1,19 @@
+    <div class="criteria-item-mb">
+        <div class="wrap-content">
+            <div class="owl-page owl-carousel owl-theme" data-items="screen:0|items:2|margin:20,screen:425|items:2|margin:20,screen:575|items:2|margin:10,screen:767|items:2|margin:10,screen:991|items:2|margin:20,screen:1199|items:2|margin:20" data-rewind="1" data-autoplay="0" data-loop="1" data-lazyload="1" data-mousedrag="1" data-center="0" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1" data-navcontainer=".control-img-dichvu">
+                <?php foreach ($tieuchi as $v) { ?>
+                    <div class="criteria-item-mb">
+                        <div class="criteria-icon">
+                            <?= $func->getImage(['isLazy' => false, 'class' => 'lazy w-100', 'sizes' => '576x420x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+
+                        </div>
+                        <p class="criteria-name text-split-2"><?= $v['name' . $lang] ?></p>
+                    </div>
+                <?php } ?>
+            </div>
+            <div class="control-img-dichvu control-owl transition"></div>
+        </div>
+    </div>
     <!-- giới thiệu -->
     <div class="wrap-gioithieu">
         <div class="wrap-content">
@@ -95,7 +111,7 @@
             </div>
             <div class="box-main-dichvu">
                 <div class="left-dichvu">
-                    <div class="owl-page owl-carousel owl-theme" data-items="screen:0|items:1|margin:10,screen:425|items:2|margin:10,screen:575|items:2|margin:10,screen:767|items:2|margin:10,screen:991|items:1|margin:20,screen:1199|items:1|margin:20" data-rewind="1" data-autoplay="0" data-loop="1" data-lazyload="1" data-mousedrag="1" data-center="1" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1" data-navcontainer=".control-img-dichvu">
+                    <div class="owl-page owl-carousel owl-theme" data-items="screen:0|items:1|margin:10,screen:425|items:1|margin:10,screen:575|items:2|margin:10,screen:767|items:2|margin:10,screen:991|items:1|margin:20,screen:1199|items:1|margin:20" data-rewind="1" data-autoplay="0" data-loop="1" data-lazyload="1" data-mousedrag="1" data-center="0" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1" data-navcontainer=".control-img-dichvu">
                         <?php foreach ($dichvu_img as $v) { ?>
                             <div class="dichvu-img scale-img">
                                 <?= $func->getImage(['isLazy' => false, 'class' => 'lazy w-100', 'sizes' => '576x420x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
@@ -188,7 +204,7 @@
                 </div>
             </div>
             <div class="box-main-mxh">
-                <div class="owl-page owl-carousel owl-theme" data-items="screen:0|items:1|margin:10,screen:425|items:1|margin:10,screen:575|items:2|margin:10,screen:767|items:3|margin:10,screen:991|items:4|margin:60,screen:1199|items:4|margin:60" data-rewind="1" data-autoplay="0" data-loop="1" data-lazyload="1" data-mousedrag="1" data-center="0" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1" data-navcontainer=".control-share">
+                <div class="owl-page owl-carousel owl-theme" data-items="screen:0|items:2|margin:10,screen:425|items:2|margin:10,screen:575|items:2|margin:10,screen:767|items:3|margin:10,screen:991|items:4|margin:60,screen:1199|items:4|margin:60" data-rewind="1" data-autoplay="0" data-loop="1" data-lazyload="1" data-mousedrag="1" data-center="0" data-touchdrag="1" data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1" data-navcontainer=".control-share">
                     <?php foreach ($social as $v) { ?>
                         <a href="<?= $v['link'] ?>" target="_blank">
                             <?= $func->getImage(['isLazy' => false, 'class' => 'lazy w-100', 'sizes' => '255x130x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>

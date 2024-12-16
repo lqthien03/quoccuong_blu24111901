@@ -1,4 +1,7 @@
 @media (max-width: 1024px) {
+    .group-header{
+        display: none;
+    }
     .operation {
         width: 55%;
     }
@@ -235,7 +238,10 @@
 }
 
 @media (max-width: 768px) {
-
+    .criteria-container{
+        width: 100%;
+        display: none;
+    }
 
     .title-main span {
         font-size: 24px;
@@ -246,10 +252,32 @@
     }
 
     .box-main-dichvu {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
+        flex-direction: column;
     }
-
+.left-dichvu{
+    width: 100%;
+}
+.right-dichvu{
+    width: 100%;
+}
+.wrap-tintuc{
+    padding: 20px 0px;
+}
+.box-main-mxh{
+    margin: 20px 0px;
+}
+.wrap-feedback{
+    padding: 20px 0px;
+}
+.box-main-feedback{
+    flex-direction: column;
+}
+.left-feedback{
+    width: 100%;
+}
+.right-feedback{
+    width: 100%;
+}
     .dichvu-info .dichvu-name {
         font-size: 18px;
     }
@@ -258,10 +286,10 @@
         font-size: 14px;
     }
 
-    .dichvu-item {
+    /* .dichvu-item {
         padding: 10px;
         gap: 10px;
-    }
+    } */
 
     .xem-them a {
         font-size: 14px;
@@ -306,7 +334,9 @@
     .album-khachhang-info .album-khachhang-name {
         margin: 10px 0px 10px 160px;
     }
-
+.criteria-item-mb{
+    padding: 20px 0px;
+}
     .wrap-hinhanh {
         padding: 20px 0px;
     }
@@ -314,6 +344,7 @@
     .box-main-hinhanh {
         display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 
     .hinhanh-item-0 h3 {
@@ -723,8 +754,11 @@
 
     .footer-article {
         background-size: cover;
+        padding: 20px 0px 0px 0px ;
     }
-
+    .footer-news:nth-child(2){
+        text-align: left;
+    }
     .footer-news:nth-child(2) {
         border: none;
     }
@@ -782,14 +816,27 @@
     }
 
     .info-gioithieu {
-        padding: 20px;
         width: 100%;
     }
 
     span.tieudesub {
-        font-size: 16px;
+        font-size: 35px;
     }
-
+    .group-hotline-gioithieu{
+        gap: 0px;
+        justify-content: space-between;
+    }
+    .choose_list{
+        overflow: scroll;
+        justify-content: flex-start;
+    }
+    .choose_list p{
+        white-space: nowrap;
+    }
+    .grid-product{
+        grid-template-columns:repeat(2,1fr) ;
+        gap: 10px;
+    }
     span.tieude {
         font-size: 24px;
     }
